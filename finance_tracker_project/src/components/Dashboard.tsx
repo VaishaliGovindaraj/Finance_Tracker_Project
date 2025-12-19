@@ -39,29 +39,29 @@ export default function Dashboard({ expenses }: DashboardProps) {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Spending Dashboard</h2>
+    <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-800">Spending Dashboard</h2>
 
       {expenses.length === 0 ? (
         <p className="text-gray-500 text-center py-8">No expenses to display yet.</p>
       ) : (
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {/* Total Overview */}
-          <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-6 text-white">
-            <h3 className="text-lg font-medium mb-2">Total Spending</h3>
-            <p className="text-4xl font-bold">${totalSpent.toFixed(2)}</p>
-            <p className="text-sm mt-2 opacity-90">{expenses.length} transactions</p>
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 sm:p-6 text-white">
+            <h3 className="text-sm sm:text-lg font-medium mb-1 sm:mb-2">Total Spending</h3>
+            <p className="text-3xl sm:text-4xl font-bold">${totalSpent.toFixed(2)}</p>
+            <p className="text-xs sm:text-sm mt-1 sm:mt-2 opacity-90">{expenses.length} transactions</p>
           </div>
 
           {/* Spending by Category */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Spending by Category</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800">Spending by Category</h3>
             <div className="space-y-3">
               {categoryData.map((item, index) => (
                 <div key={item.category}>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-sm font-medium text-gray-700">{item.category}</span>
-                    <span className="text-sm text-gray-600">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1 gap-0.5">
+                    <span className="text-xs sm:text-sm font-medium text-gray-700">{item.category}</span>
+                    <span className="text-xs sm:text-sm text-gray-600">
                       ${item.amount.toFixed(2)} ({item.percentage.toFixed(1)}%)
                     </span>
                   </div>
@@ -77,16 +77,16 @@ export default function Dashboard({ expenses }: DashboardProps) {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
-              <p className="text-sm text-green-700 font-medium">Avg per Transaction</p>
-              <p className="text-2xl font-bold text-green-800">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="bg-green-50 rounded-lg p-3 sm:p-4 border border-green-200">
+              <p className="text-xs sm:text-sm text-green-700 font-medium">Avg per Transaction</p>
+              <p className="text-xl sm:text-2xl font-bold text-green-800 mt-1">
                 ${(totalSpent / expenses.length).toFixed(2)}
               </p>
             </div>
-            <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
-              <p className="text-sm text-purple-700 font-medium">Categories</p>
-              <p className="text-2xl font-bold text-purple-800">
+            <div className="bg-purple-50 rounded-lg p-3 sm:p-4 border border-purple-200">
+              <p className="text-xs sm:text-sm text-purple-700 font-medium">Categories</p>
+              <p className="text-xl sm:text-2xl font-bold text-purple-800 mt-1">
                 {Object.keys(spendingByCategory).length}
               </p>
             </div>

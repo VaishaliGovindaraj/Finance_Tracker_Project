@@ -77,28 +77,28 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <h1 className="text-3xl font-bold text-gray-900">💸 Smart Budget Tracker</h1>
-          <p className="text-sm text-gray-600 mt-1">Track your expenses and manage your budget effortlessly</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">💸 Smart Budget Tracker</h1>
+          <p className="text-xs sm:text-sm text-gray-600 mt-1">Track your expenses and manage your budget effortlessly</p>
         </div>
       </header>
 
       {/* Navigation Tabs */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex space-x-8">
+      <div className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <nav className="flex overflow-x-auto scrollbar-hide space-x-2 sm:space-x-8">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
+                className={`py-3 sm:py-4 px-3 sm:px-4 border-b-2 font-medium text-xs sm:text-sm transition-colors whitespace-nowrap flex items-center ${
                   activeTab === tab.id
                     ? 'border-blue-500 text-blue-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
-                <span className="mr-2">{tab.icon}</span>
-                {tab.label}
+                <span className="text-base sm:text-lg">{tab.icon}</span>
+                <span className="ml-1 sm:ml-2">{tab.label}</span>
               </button>
             ))}
           </nav>
@@ -106,7 +106,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
         {activeTab === 'dashboard' && <Dashboard expenses={expenses} />}
 
         {activeTab === 'expenses' && (
@@ -121,12 +121,12 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <p className="text-center text-sm text-gray-500">
+      <footer className="bg-white border-t border-gray-200 mt-8 sm:mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+          <p className="text-center text-xs sm:text-sm text-gray-500">
             Smart Budget Tracker - Minimal Version using JSON storage
           </p>
-          <p className="text-center text-xs text-gray-400 mt-1">
+          <p className="text-center text-xs text-gray-400 mt-1 hidden sm:block">
             Ready to be upgraded to a full-stack application with database integration
           </p>
         </div>
