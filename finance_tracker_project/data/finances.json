@@ -1,0 +1,84 @@
+{
+  "expenses": [
+    {
+      "id": "1",
+      "description": "Grocery shopping at Walmart",
+      "amount": 85.50,
+      "category": "Food & Groceries",
+      "date": "2024-12-15",
+      "createdAt": "2024-12-15T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "description": "Gas station fill-up",
+      "amount": 45.00,
+      "category": "Transportation",
+      "date": "2024-12-16",
+      "createdAt": "2024-12-16T08:15:00Z"
+    },
+    {
+      "id": "3",
+      "description": "Netflix subscription",
+      "amount": 15.99,
+      "category": "Entertainment",
+      "date": "2024-12-17",
+      "createdAt": "2024-12-17T12:00:00Z"
+    },
+    {
+      "id": "4",
+      "description": "Coffee at Starbucks",
+      "amount": 5.75,
+      "category": "Food & Groceries",
+      "date": "2024-12-18",
+      "createdAt": "2024-12-18T07:45:00Z"
+    },
+    {
+      "id": "5",
+      "description": "Electric bill payment",
+      "amount": 120.00,
+      "category": "Utilities",
+      "date": "2024-12-18",
+      "createdAt": "2024-12-18T14:20:00Z"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "1",
+      "category": "Food & Groceries",
+      "limit": 500,
+      "spent": 91.25,
+      "month": "2024-12"
+    },
+    {
+      "id": "2",
+      "category": "Transportation",
+      "limit": 200,
+      "spent": 45.00,
+      "month": "2024-12"
+    },
+    {
+      "id": "3",
+      "category": "Entertainment",
+      "limit": 100,
+      "spent": 15.99,
+      "month": "2024-12"
+    },
+    {
+      "id": "4",
+      "category": "Utilities",
+      "limit": 300,
+      "spent": 120.00,
+      "month": "2024-12"
+    }
+  ],
+  "categories": [
+    "Food & Groceries",
+    "Transportation",
+    "Entertainment",
+    "Utilities",
+    "Healthcare",
+    "Shopping",
+    "Education",
+    "Other"
+  ]
+}
