@@ -3,7 +3,7 @@
     {
       "id": "1",
       "description": "Grocery shopping at Walmart",
-      "amount": 85.50,
+      "amount": 85.5,
       "category": "Food & Groceries",
       "date": "2024-12-15",
       "createdAt": "2024-12-15T10:30:00Z"
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "description": "Gas station fill-up",
-      "amount": 45.00,
+      "amount": 45,
       "category": "Transportation",
       "date": "2024-12-16",
       "createdAt": "2024-12-16T08:15:00Z"
@@ -35,10 +35,18 @@
     {
       "id": "5",
       "description": "Electric bill payment",
-      "amount": 120.00,
+      "amount": 120,
       "category": "Utilities",
       "date": "2024-12-18",
       "createdAt": "2024-12-18T14:20:00Z"
+    },
+    {
+      "id": "1766162024767",
+      "description": "Travel",
+      "amount": 50,
+      "category": "Entertainment",
+      "date": "2025-12-04",
+      "createdAt": "2025-12-19T16:33:44.767Z"
     }
   ],
   "budgets": [
@@ -53,21 +61,21 @@
       "id": "2",
       "category": "Transportation",
       "limit": 200,
-      "spent": 45.00,
+      "spent": 45,
       "month": "2024-12"
     },
     {
       "id": "3",
       "category": "Entertainment",
       "limit": 100,
-      "spent": 15.99,
+      "spent": 65.99,
       "month": "2024-12"
     },
     {
       "id": "4",
       "category": "Utilities",
       "limit": 300,
-      "spent": 120.00,
+      "spent": 120,
       "month": "2024-12"
     }
   ],
