@@ -58,7 +58,7 @@ export default function ExpenseForm({ categories, onExpenseAdded }: ExpenseFormP
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
             placeholder="e.g., Grocery shopping"
           />
         </div>
@@ -73,7 +73,7 @@ export default function ExpenseForm({ categories, onExpenseAdded }: ExpenseFormP
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
             placeholder="0.00"
           />
         </div>
@@ -86,7 +86,7 @@ export default function ExpenseForm({ categories, onExpenseAdded }: ExpenseFormP
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
           >
             <option value="">Select a category</option>
             {categories.map((cat) => (
@@ -106,7 +106,7 @@ export default function ExpenseForm({ categories, onExpenseAdded }: ExpenseFormP
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
           />
         </div>
 
